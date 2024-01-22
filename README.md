@@ -82,6 +82,7 @@
     "vite": "^4.4.9"
   },
   "scripts": {
+    "dev": "vite",
     "build": "vite build",
     "preview": "vite"
   }
