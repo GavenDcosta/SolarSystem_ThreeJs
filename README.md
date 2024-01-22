@@ -433,3 +433,23 @@ renderer.setAnimationLoop(animate)                                 //will run th
 
 ```
 
+# Step 12 : Importing External Model
+
+Comment out all the planets and rotation code inside of function and do this 
+
+```
+import {GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader' 
+const asset = new URL('./assets/cyberpunk.glb',import.meta.url)
+
+const loader = new GLTFLoader()
+
+// lambo
+loader.load(asset.href,gltf=>{
+    const model = gltf.scene
+    model.position.set(2.1,1.21,0)
+    scene.add(model)
+},undefined,e=>{
+    console.error(e);
+})
+```
+
