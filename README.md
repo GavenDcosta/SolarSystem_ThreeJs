@@ -443,13 +443,16 @@ const asset = new URL('./assets/cyberpunk.glb',import.meta.url)
 
 const loader = new GLTFLoader()
 
-// lambo
 loader.load(asset.href,gltf=>{
     const model = gltf.scene
     model.position.set(2.1,1.21,0)
+    model.rotation.set(0, Math.PI-0.5, 0);
+    const scaleValue = 10; // You can adjust this value to make the model bigger or smaller
+    model.scale.set(scaleValue, scaleValue, scaleValue);
     scene.add(model)
 },undefined,e=>{
     console.error(e);
 })
+
 ```
 
