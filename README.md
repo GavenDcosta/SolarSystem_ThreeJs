@@ -439,7 +439,7 @@ Comment out all the planets and rotation code inside of function and do this
 
 ```
 import {GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader' 
-const asset = new URL('./assets/cyberpunk.glb',import.meta.url)
+const asset = new URL('./assets/object.glb',import.meta.url)
 
 const loader = new GLTFLoader()
 
